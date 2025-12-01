@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"net"
 	"os"
+	"strconv"
 	"sync"
 	"time"
-	"strconv"
 )
 
 const (
@@ -17,15 +17,15 @@ const (
 	MAXCLIENTS    = 1000
 	VERSION_MAJOR = 1
 	VERSION_MINOR = 0
-	VERSION_PATCH = 0
+	VERSION_PATCH = 1
 	IP            = "::"
 	DEFAULT_PORT  = 60050
 )
 
 type Client struct {
-	cpuid     [CPUIDLEN]byte
-	addr      net.UDPAddr
-	lastTime  time.Time
+	cpuid    [CPUIDLEN]byte
+	addr     net.UDPAddr
+	lastTime time.Time
 }
 
 var (
@@ -118,7 +118,7 @@ func main() {
 	}
 	defer conn.Close()
 
-	fmt.Printf("[Info] NRL2730-Go %d.%d.%d server is running on %s\n", VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH, bindAddr)
+	fmt.Printf("[Info] NRL-Go %d.%d.%d server is running on %s\n", VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH, bindAddr)
 
 	buf := make([]byte, MAXLEN)
 

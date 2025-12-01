@@ -1,9 +1,9 @@
-# nrl2730-go
+# nrl-go
 
-An NRL2730 Server with Go
+An NRL Server with Go
 
-#### Looking for a Rust version? [Here](https://github.com/FARC-CN/nrl2730-rust) it is.
-#### We offer a public server with the Go version program: nrl2730.farc.org.cn
+#### Looking for a Rust version? [Here](https://github.com/FARC-CN/nrl-rust) it is.
+#### We offer a public server with the Go version program: nrl.farc.org.cn
 
 ```
 This program is used to forward UDP packets between clients, the first 20 bytes of the packet header are
@@ -19,10 +19,10 @@ Download, compile, and execute programs
 
 ```
 # download
-git clone https://github.com/FARC-CN/nrl2730-go
+git clone https://github.com/FARC-CN/nrl-go
 
 # compile
-cd nrl2730-go
+cd nrl-go
 go build main.go
 
 # run
